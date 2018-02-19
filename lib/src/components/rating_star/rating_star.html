@@ -1,0 +1,14 @@
+<template [ngIf]="editMode">
+    <span (mouseleave)="leaveAll()">
+        <span *ngFor="let star of ratingStars">
+            <material-button hover class="{{star.state}}" (trigger)="pushed(star)" (mouseover)="over(star)" icon>
+                <glyph icon="{{star.starIconType}}"></glyph>
+            </material-button>
+        </span>
+    </span>
+</template>
+<template [ngIf]="!editMode">
+        <span *ngFor="let star of ratingStars">
+            <glyph class="{{star.state}}" icon="{{star.starIconType}}"></glyph>
+        </span>
+</template>

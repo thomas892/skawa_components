@@ -4,6 +4,23 @@ import 'package:angular2/angular2.dart';
 import 'package:angular_components/src/components/glyph/glyph.dart';
 import 'package:angular_components/src/components/material_button/material_button.dart';
 
+// A star rating component. Can be used to rate things on a 5-star scale, or
+// display such ratings.
+//
+//  __Example-usage:__
+//
+//  <rating-star [editMode]="true"></rating-star>
+//
+//  Or:
+//
+//  <rating-star [score]="scoreToDisplay"></rating-star>
+//
+//  __Inputs:__
+//  - `editMode: bool` -- Decides whether the component is editable or not.
+//  - `score: double` -- Score to display between 0.0 - 5.0.
+//
+//
+//
 @Component(
     selector: 'rating-star',
     templateUrl: 'rating_star.html',
